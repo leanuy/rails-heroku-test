@@ -28,3 +28,6 @@ Cualquier error consultar la siguiente documentacion: https://devcenter.heroku.c
 
 Para ver el ejemplo corriendo en heroku entrar a 
 http://polar-scrubland-46250.herokuapp.com/
+
+IMPORTANTEEEE!!! crear la APP con PostgreSQL como base de datos sino despues hay que configurar a mano para que ande en heroku(prefieren postgres)
+Se hace como sigue rails new project-name-here --database=postgresql
