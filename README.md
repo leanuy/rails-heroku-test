@@ -1,24 +1,28 @@
-# README
+Guia para hacer deploy de una webapp rails en heroku
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Antes de clonar, verificar se tiene la version de ruby 2.5 y la version 5.x de rails
+(en consola correr ruby -v y rails -v)
 
-Things you may want to cover:
+En esta guia suponemos que estan instaladas las dependencias solicitadas por rails (node, bundle, postgreSQL. etc)
 
-* Ruby version
+Clonarse el repositorio. Luego correr bundle install en la carpeta el proyecto.
 
-* System dependencies
+Hacer el setup de la base de datos y la migracion. Correr rake db:setup y rails db:migrate (Investigar si se tienen errores en como usar postgres con rails)
 
-* Configuration
+En este punto correr rails server y ver localmente la app.
 
-* Database creation
+Para hacer el deploy en heroku, loguearse con heroku login, hacer heroku create. Luego:
+git add .
+git commit -m "Initial commit"
+git push heroku master
 
-* Database initialization
+Luego se debe setear la base de datos en el sevidor:
+heroku run rake db:setup
+heroku rake db:migrate
 
-* How to run the test suite
+Para refrescar hacer heroku restart
 
-* Services (job queues, cache servers, search engines, etc.)
+Ir a la url indicada luego del push de heroku y verificar si la web app esta funcionando.
 
-* Deployment instructions
+Cualquier error consultar la siguiente documentacion: https://devcenter.heroku.com/articles/getting-started-with-rails5#local-setup
 
-* ...
