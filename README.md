@@ -24,5 +24,5 @@ Para refrescar hacer heroku restart
 
 Ir a la url indicada luego del push de heroku y verificar si la web app esta funcionando.
 
-Cualquier error consultar la siguiente documentacion: https://devcenter.heroku.com/articles/getting-started-with-rails5#local-setup
+Cualquier error consultar la siguiente documentacion: https://devcenter.heroku.com/articles/getting-started-with-rails5
 
