@@ -26,3 +26,5 @@ Ir a la url indicada luego del push de heroku y verificar si la web app esta fun
 
 Cualquier error consultar la siguiente documentacion: https://devcenter.heroku.com/articles/getting-started-with-rails5
 
+Para ver el ejemplo corriendo en heroku entrar a 
+http://polar-scrubland-46250.herokuapp.com/
