@@ -19,7 +19,7 @@ class StoriesController < ApplicationController
     # GET /lenny
     genders = ['putito', 'machote', 'maricota']
     result = genders[rand(genders.length)]
-    render json: '{"genero": "#{result}"}'
+    render json: { genero: result}
   end
 
   # GET /stories/new
