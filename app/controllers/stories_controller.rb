@@ -1,6 +1,7 @@
 require 'json'
 
 
+
 class StoriesController < ApplicationController
   before_action :set_story, only: [:show, :edit, :update, :destroy]
 
@@ -20,6 +21,21 @@ class StoriesController < ApplicationController
     genders = ['putito', 'machote', 'maricota']
     result = genders[rand(genders.length)]
     render json: { genero: result}
+  end
+
+  def decidir
+    #GET yes-no
+    render json: { answer: ['yes', 'no'][rand(2)]}
+  end
+
+  def alguien
+    # GET /alguien-tiene-un-gemfile
+    # /home/leandro/Documents/ruby_projects/test_app
+    contenido = "GEMFILE QUE ANDA: \r\n\n"
+    File.open(File.dirname(__FILE__) + "/GemfileTxt.txt").each do |line|
+      contenido += line
+    end
+    render plain: contenido
   end
 
   # GET /stories/new
