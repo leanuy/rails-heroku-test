@@ -17,7 +17,9 @@ class StoriesController < ApplicationController
 
   def accion
     # GET /lenny
-    render json: '{"genero": "putito"}'
+    genders = ['putito', 'machote', 'maricota']
+    result = genders[rand(genders.length)]
+    render json: '{"genero": "#{result}"}'
   end
 
   # GET /stories/new
