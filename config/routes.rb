@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/lenny', to: 'stories#accion'
   get '/yes-no', to: 'stories#decidir'
   get '/alguien-tiene-gemfile', to: 'stories#alguien'
+  get '/estimar-historia', to: 'stories#estimar'
 end

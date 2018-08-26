@@ -38,6 +38,11 @@ class StoriesController < ApplicationController
     render plain: contenido
   end
 
+  def estimar
+    numeros = ['1', '2', '3', '5', '8']
+    render json: { estimation: numeros[rand(numeros.length)]}
+  end
+
   # GET /stories/new
   def new
     @story = Story.new
