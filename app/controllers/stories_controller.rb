@@ -31,7 +31,7 @@ class StoriesController < ApplicationController
   def alguien
     # GET /alguien-tiene-un-gemfile
     # /home/leandro/Documents/ruby_projects/test_app
-    contenido = "GEMFILE QUE ANDA: \r\n\n"
+    contenido = "# GEMFILE QUE ANDA: \r\n\n"
     File.open(File.dirname(__FILE__) + "/GemfileTxt.txt").each do |line|
       contenido += line
     end
