@@ -39,7 +39,7 @@ class StoriesController < ApplicationController
   end
 
   def estimar
-    numeros = ['1', '2', '3', '5', '8']
+    numeros = ['1', '2', '3', '5', '8', 'cafe']
     render json: { estimation: numeros[rand(numeros.length)]}
   end
 
